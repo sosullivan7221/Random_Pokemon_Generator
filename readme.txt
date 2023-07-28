@@ -1,4 +1,14 @@
 Hello!
 
 This is an attempt to create a Pokemon Stat Generator! The goal is to have a Pokemon randomly generated and allow the user to select the stat they want from the Pokemon.
-The end result should be six randomly generated stats from six randomyl generated Pokemon.
+The end result should be six chosen stat values from six randomly generated Pokemon.
+
+Jupyter notebook is being used for testing code and for easier readbility, which the final version will be stored in 'pokemon.py'. HTML template is WIP, will be worked on once function works properly.
+
+Current Issues/To Do:
+
+1. The variable 'Random_Pokemon' is defined outside of the functions. I want it to be defined inside of the 'Generator' function, but doing so causes the stat functions to generate a random value from the DF rather than the value matching the output of the 'Generator' function.
+2. The 'Total-Stat' function has issues, it seems to be that the value for each stat function is not stored when the function is run, but stored when the Generator function is run.
+
+3. Mapping these python functions to html buttons to display the results. Most resources have examples for the user inputting data, not sure how to map the function so it displays the stored value.
+4. Add a reset function to reset any stored values.
