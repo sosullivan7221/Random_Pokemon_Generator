@@ -16,3 +16,5 @@ Current Issues/To Do:
 3. Mapping these python functions to html buttons to display the results. Most resources have examples for the user inputting data, not sure how to map the function so it displays the stored value.
 
 4. Add a reset function to reset any stored values.
+
+5. Prevent Stat functions from being run if there is already a stored varaible. Can be run again once reset button is used.
