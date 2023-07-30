@@ -70,8 +70,15 @@ def Total():
      # Return the total stat
     return Total_Stat
 
+def Reset():
+    # Reset all stored varables
+    global Random_Pokemon, Attack_Stat, Defense_Stat, HP_Stat, SP_Attack_Stat, SP_Defense_Stat, Speed_Stat, Total_Stat
+
+    del Random_Pokemon, Attack_Stat, Defense_Stat, HP_Stat, SP_Attack_Stat, SP_Defense_Stat, Speed_Stat, Total_Stat
+
 
 Generator()
+Reset()
 
 HP()
 Attack()
