@@ -5,6 +5,8 @@ The end result should be six chosen stat values from six randomly generated Poke
 
 Jupyter notebook is being used for testing code and for easier readbility, which the final version will be stored in 'pokemon.py'. HTML template is WIP, will be worked on once function works properly.
 
+Currently Deployed On Render.com: https://pokemon-stat-generator.onrender.com/  (Note: none of the html functionality is live yet, can use that link to track html process although it may be slow for the time being.)
+
 Current Issues/To Do:
 
 1̶.̶ T̶h̶e̶ v̶a̶r̶i̶a̶b̶l̶e̶ '̶R̶a̶n̶d̶o̶m̶_̶P̶o̶k̶e̶m̶o̶n̶'̶ i̶s̶ d̶e̶f̶i̶n̶e̶d̶ o̶u̶t̶s̶i̶d̶e̶ o̶f̶ t̶h̶e̶ f̶u̶n̶c̶t̶i̶o̶n̶s̶.̶ I̶ w̶a̶n̶t̶ i̶t̶ t̶o̶ b̶e̶ d̶e̶f̶i̶n̶e̶d̶ i̶n̶s̶i̶d̶e̶ o̶f̶ t̶h̶e̶ '̶G̶e̶n̶e̶r̶a̶t̶o̶r̶'̶ f̶u̶n̶c̶t̶i̶o̶n̶,̶ b̶u̶t̶ d̶o̶i̶n̶g̶ s̶o̶ c̶a̶u̶s̶e̶s̶ t̶h̶e̶ s̶t̶a̶t̶ f̶u̶n̶c̶t̶i̶o̶n̶s̶ t̶o̶ g̶e̶n̶e̶r̶a̶t̶e̶ a̶ r̶a̶n̶d̶o̶m̶ v̶a̶l̶u̶e̶ f̶r̶o̶m̶ t̶h̶e̶ D̶F̶ r̶a̶t̶h̶e̶r̶ t̶h̶a̶n̶ t̶h̶e̶ v̶a̶l̶u̶e̶ m̶a̶t̶c̶h̶i̶n̶g̶ t̶h̶e̶ o̶u̶t̶p̶u̶t̶ o̶f̶ t̶h̶e̶ '̶G̶e̶n̶e̶r̶a̶t̶o̶r̶'̶ f̶u̶n̶c̶t̶i̶o̶n̶.̶
