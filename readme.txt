@@ -16,6 +16,7 @@ Current Issues/To Do:
     2a. Resolved! This was easily fixed once the global function was used to store the values. The stat values can be summed easily.
 
 3. Mapping these python functions to html buttons to display the results. Most resources have examples for the user inputting data, not sure how to map the function so it displays the stored value.
+    3a. HTML has been updated, POST request used to display the current stats for the randomyl selected Pokeomon. Current objective is to place buttons where these stats are currently, allowing user to choose a stat. The result should be the user being returned to the home page, with the selected stat being displayed in the table. The user can generate a new pokemon after this. 
 
 4̶.̶ A̶d̶d̶ a̶ r̶e̶s̶e̶t̶ f̶u̶n̶c̶t̶i̶o̶n̶ t̶o̶ r̶e̶s̶e̶t̶ a̶n̶y̶ s̶t̶o̶r̶e̶d̶ v̶a̶l̶u̶e̶s̶.̶ 
     4a. Resolved! Created function using del to remove all stored variables.
