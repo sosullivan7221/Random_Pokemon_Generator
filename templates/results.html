@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="static\styles.css">
         <title> Pokemon Stat Generator - Results </title>
     </head>
     <body>
         <center>
         <h1> Pokemon Stat Generator Results </h1>
-        <p> {{data.Name}} </p>
-        <p> {{data.HP}} </p>
-        <p> {{data.Attack}} </p>
-        <p> {{data.Defense}} </p>
-        <p> {{data.SP_Attack}} </p>
-        <p> {{data.SP_Defense}} </p>
-        <p> {{data.Speed}} </p>
+
+        <table>
+            <tr>
+                <th> Stat </th>
+                <th> Value </th>
+            </tr>
+            <tr>
+                <td> Name </td>
+                <td> {{data.Name}} </td>
+            </tr>
+            <tr>
+                <td> HP </td>
+                <td> {{data.HP}} </td>
+            </tr>
+            <tr>
+                <td> Attack </td>
+                <td> {{data.Attack}} </td>
+            </tr>
+            <tr>
+                <td> Defense </td>
+                <td> {{data.Defense}} </td>
+            </tr>
+            <tr>
+                <td> Special Attack </td>
+                <td> {{data.SP_Attack}} </td>
+            </tr>
+            <tr>
+                <td> Special Defense </td>
+                <td> {{data.SP_Defense}} </td>
+            </tr>
+            <tr>
+                <td> Speed </td>
+                <td> {{data.Speed}} </td>
+            </tr>
+        </table>
         </center>
 </html>
