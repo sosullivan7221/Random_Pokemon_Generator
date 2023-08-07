@@ -20,7 +20,7 @@
             <tr>
                 <td> HP </td>
                 <td> 
-                    <form action="" method="post">
+                    <form action= "" method="Get">
                     <input type="submit" value="Select HP Stat" />
                 </form>
                 </td>
@@ -46,5 +46,6 @@
                 <td> {{data.Speed.values}} </td>
             </tr>
         </table>
+        <button> <a href="{{ url_for('home') }}">Back to Home</a>
         </center>
 </html>

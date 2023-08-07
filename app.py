@@ -29,24 +29,12 @@ def home():
         poke_data = poke_data[poke_data['No'] == dataForm['number']]
         print('Data selected: ', poke_data.to_dict('records'))
         return render_template('results.html', data = poke_data)
-
+    
     return render_template('home.html')
 
 @app.route('/results', methods = ['GET', 'POST'])
 def results():
-    poke_data_HP = pd.read_csv('Pokedex_Ver_SV2.csv')
-    if request.method == 'POST':
-        dataForm2 = request.form
-        print('Data from form: ', dataForm2)
-        
-        if dataForm2 == {}:
-            dataForm2 = poke_data_HP
-            print('Stat Selected: ', dataForm2.values)
-        
-        poke_data_HP = poke_data_HP[poke_data_HP.values['HP'] == poke_data.values['HP']]
-        print('HP Selected: ', poke_data_HP.to_dict('records'))
-        return render_template('home.html', data = poke_data_HP)
-    
-    return render_template('results.html')
+     return render_template('results.html')
+
 
 app.run(host = '0.0.0.0', port = 8080, debug = True, use_reloader = True)
