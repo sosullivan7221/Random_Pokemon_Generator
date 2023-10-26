@@ -12,6 +12,7 @@
             <tr>
                 <th> Stat </th>
                 <th> Value </th>
+                <th> Select </th>
             </tr>
             <tr>
                 <td> Name </td>
@@ -19,31 +20,63 @@
             </tr>
             <tr>
                 <td> HP </td>
-                <td> 
-                    <form action= "" method="Get">
-                    <input type="submit" value="Select HP Stat" />
-                </form>
+                <td> {{data.HP.values}} </td>
+                <td>
+                    <form action="{{ url_for('home') }}" method="POST">
+                        <input type="hidden" name="selected_stat" value="HP">
+                        <input type="submit" value="Select HP Stat" />
+                    </form>
                 </td>
             </tr>
             <tr>
                 <td> Attack </td>
                 <td> {{data.Attack.values}} </td>
+                <td>
+                    <form action="{{ url_for('home') }}" method="POST">
+                        <input type="hidden" name="selected_stat" value="Attack">
+                        <input type="submit" value="Select Attack Stat" />
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td> Defense </td>
                 <td> {{data.Defense.values}} </td>
+                <td>
+                    <form action="{{ url_for('home') }}" method="POST">
+                        <input type="hidden" name="selected_stat" value="Defense">
+                        <input type="submit" value="Select Defense Stat" />
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td> Special Attack </td>
                 <td> {{data.SP_Attack.values}} </td>
+                <td>
+                    <form action="{{ url_for('home') }}" method="POST">
+                        <input type="hidden" name="selected_stat" value="SP_Attack">
+                        <input type="submit" value="Select Special Attack Stat" />
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td> Special Defense </td>
                 <td> {{data.SP_Defense.values}} </td>
+                <td>
+                    <form action="{{ url_for('home') }}" method="POST">
+                        <input type="hidden" name="selected_stat" value="SP_Defense">
+                        <input type="submit" value="Select Special Defense Stat" />
+                    </form>
+                </td>
             </tr>
             <tr>
                 <td> Speed </td>
                 <td> {{data.Speed.values}} </td>
+                <td>
+                    <form action="{{ url_for('home') }}" method="POST">
+                        <input type="hidden" name="selected_stat" value="Speed">
+                        <input type="submit" value="Select Speed Stat" />
+                    </form>
+                </td>
             </tr>
         </table>
         <button> <a href="{{ url_for('home') }}">Back to Home</a>

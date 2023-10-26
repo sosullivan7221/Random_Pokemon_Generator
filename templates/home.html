@@ -8,7 +8,7 @@
         <center>
         <h1> Pokemon Stat Generator </h1>
         
-        <form action="" method="post">
+        <form action="results" method="post">
             <input type="submit" value="Randomly select Pokemon" />
         </form>
 
@@ -20,27 +20,27 @@
             <tr>
             <tr>
                 <td> HP </td>
-                <td> 'placeholder' </td>
+                <td> {{ selected_value.value if selected_value else 'No Stat Selected' }} </td>
             </tr>
             <tr>
                 <td> Attack </td>
-                <td> 'placeholder' </td>
+                <td> {{ selected_value.value if selected_value else 'No Stat Selected' }} </td>
             </tr>
             <tr>
                 <td> Defense </td>
-                <td> 'placeholder' </td>
+                <td> {{ selected_value.value if selected_value else 'No Stat Selected' }} </td>
             </tr>
             <tr>
                 <td> Special Attack </td>
-                <td> 'placeholder' </td>
+                <td> {{ selected_value.value if selected_value else 'No Stat Selected' }} </td>
             </tr>
             <tr>
                 <td> Special Defense </td>
-                <td> 'placeholder' </td>
+                <td> {{ selected_value.value if selected_value else 'No Stat Selected' }} </td>
             </tr>
             <tr>
                 <td> Speed </td>
-                <td> 'placeholder' </td>
+                <td> {{ selected_value.value if selected_value else 'No Stat Selected' }} </td>
             </tr>
         </table>
         

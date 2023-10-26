@@ -8,33 +8,38 @@ app = Flask(__name__)
 
 
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
     global poke_data
     poke_data = pd.read_csv('Pokedex_Ver_SV2.csv')
-    # if the request is a POST request then we will get the data from the form
+
     if request.method == 'POST':
-        global dataForm
         dataForm = request.form
         print('Data from form: ', dataForm)
-        ## if data from form is a empty dictionary, lets select a random number betweeen 1 and 1000
+
         if dataForm == {}:
-            dataForm = {'number': random.randint(1,1010)}
+            dataForm = {'number': random.randint(1, 1010)}
             print('Random number selected: ', dataForm['number'])
         else:
-            print('....')
-        # convert random number to a string
-        # dataForm['number'] = str(dataForm['number'])
-        # get matching row from data where the number is equal to the number from the form
+            selected_stat = dataForm.get('selected_stat')  # Get the selected stat
+            print('Selected Stat: ', selected_stat)
+
+            if selected_stat:
+                # Get the value of the selected stat
+                selected_stat_value = poke_data[selected_stat].values[0]
+
+                # You can add the selected value to the home template context
+                selected_value = {'selected_stat': selected_stat, 'value': selected_stat_value}
+                return render_template('home.html', selected_value=selected_value)
+
         poke_data = poke_data[poke_data['No'] == dataForm['number']]
         print('Data selected: ', poke_data.to_dict('records'))
-        return render_template('results.html', data = poke_data)
-    
+
     return render_template('home.html')
 
 @app.route('/results', methods = ['GET', 'POST'])
 def results():
-     return render_template('results.html')
+     return render_template('results.html', data = poke_data)
 
 
 app.run(host = '0.0.0.0', port = 8080, debug = True, use_reloader = True)
